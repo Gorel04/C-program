@@ -4,7 +4,7 @@
 
 
 
-int tab1[dim] , tab2[dim], somTab[dim];
+int tab1[dim] , tab2[dim], somTab[dim] , Tab0[3][3], Tab1[3][3], DiffTab[3][3];
 int i,j,k,index_suppr ,NDim;
 int home_Geo, home_Repe, home_Tab;
 
@@ -137,14 +137,20 @@ int main(){
                                    for(i=0;i<NDim;i++){
                                         printf("%d \t",somTab[i]);
                                    }
+                                   break;
+						case 2:// nombre d'occurence négatif
+									for(i=0;i<3;i++){
+										for(j=0;j<3;j++){
+											printf("Entre")
+										}
+									}
 
-                  }
+				 }
 
-        break;
+		break;
         case 'Q':
         case 'q': printf("QUITTER");
                   //exit(0);
-                  printf("hello");
         break;
         default: printf("ERREUR d'entrer !");
 
