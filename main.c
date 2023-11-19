@@ -83,7 +83,7 @@ int main(){
 					printf("Entrez le cote 2 du Trapeze : ");
 					scanf("%f",&c4);
 
-					//Traitement
+					//Traitement ...
 					perimetre=c1+c2+c3+c4;
 					//Affichage
 					printf("Perimetre du Trapeze :\n");
