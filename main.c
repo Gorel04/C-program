@@ -30,8 +30,10 @@ int main(){
 	system("cls");
 	while(1){
 		system("cls");
-		printf("\t\t\tMENU\n");
-		printf("Pressez [O] SOUS MENU OBJET GEOMETRIQUE\n");
+		printf("      \t__________________________\n\t|");
+		printf("          MENU           |\n");
+		printf("\t|_________________________|\n");
+		printf("\nPressez [O] SOUS MENU OBJET GEOMETRIQUE\n");
 		printf("Pressez [B] SOUS MENU LES ACTIONS REPETITIVES\n");
 		printf("Pressez [A] SOUS MENU UNI MULTI DIMENTIONNELS\n");
 		printf("Pressez [Q] QUITTER\n");
@@ -58,14 +60,16 @@ int main(){
 			case 'o':
 				do{
 					 system("cls");
-					 printf("\nSOUS MENU GEOMETRIQUE\n");
-					  printf("Pressez[1] pour les actions de l'objet Trapeze\n\n");
+					 printf(" _________________________________________");
+					 printf("\n|\t   SOUS MENU GEOMETRIQUE          |\n|");
+					 printf("_________________________________________|\n");
+					  printf("\nPressez[1] pour les actions de l'objet Trapeze\n\n");
 					  printf("Pressez[2] pour les actions de l'objet Cone circulaire\n\n");
 					  printf("Pressez[3] pour les actions de l'objet Boite Rectangulaire \n\n");
 					  printf("Pressez[4] pour quitter le sous menu \n\n");
 					  printf("Votre choix : ");
 					  scanf("%d",&home_Geo);
-				}while((home_Geo < 1) || home_Geo >5 );
+				}while((home_Geo < 1) || home_Geo >4 );
 				switch(home_Geo){
 				case 1:// Actions de l'objet Trapeze
 					//Saisir les donnees
@@ -83,7 +87,7 @@ int main(){
 					perimetre=c1+c2+c3+c4;
 					//Affichage
 					printf("Perimetre du Trapeze :\n");
-					printf("\nP = cote1 + cote2 + cote3 + cote4 \nP =  %.2f +  %.2f +  %.2f +  %.2f \n P = %.2f ",c1,c2,c3,c4,perimetre);
+					printf("\nP = cote1 + cote2 + cote3 + cote4 \nP =  %.2f +  %.2f +  %.2f +  %.2f \n P = %.2f \n\n",c1,c2,c3,c4,perimetre);
 					system("pause");
 					system("cls");
 					//Saisir les donnees
@@ -97,7 +101,7 @@ int main(){
 					//Traitement
 					surf =((g_base+p_base)*h)/2.0;
 					//Affichage
-					printf("\nS = (B+b)*h/2\nS = (%.2f + %.2f)* %.2f /2\nS =%.2f",g_base,p_base,h,surf);
+					printf("\nS = (B+b)*h/2\nS = (%.2f + %.2f)* %.2f /2\nS =%.2f\n\n",g_base,p_base,h,surf);
 					system("pause");
 				break;
 
@@ -112,7 +116,7 @@ int main(){
 					//Traitement
 					vol=1.0/3.0*M_PI*(pow(rayon,2))*h;
 					//Affichage
-					printf("\nV = 1/3*pi*r*r*h\nV = 1/3 * %.2f * %.2f * %.2f * %.2f  \nV = %.2f",M_PI,rayon,rayon,h,vol);
+					printf("\nV = 1/3*pi*r*r*h\nV = 1/3 * %.2f * %.2f * %.2f * %.2f  \nV = %.2f\n\n",M_PI,rayon,rayon,h,vol);
 				break;
 
 				case 3: //les actions de l'objet boite rectangulaire
@@ -128,7 +132,7 @@ int main(){
 					vol=lo*la*h;
 
 					//Affichage
-					printf("\nV = long*larg*haut\nV = %.2f * %.2f * %.2f \nV = %.2f",lo,la,h,vol);
+					printf("\nV = long*larg*haut\nV = %.2f * %.2f * %.2f \nV = %.2f\n\n",lo,la,h,vol);
 				break;
 
 					case 4://Quitter le sous menu
@@ -141,8 +145,10 @@ int main(){
 			case 'b':
 					do{
 						 system("cls");
-						 printf("\nSOUS MENU REPETITIVE\n");
-						 printf("Pressez[1] pour l'Arrangement et la combinaison de P dans N \n\n");
+						 printf(" _________________________________________\n|");
+						 printf("\t   SOUS MENU REPETITIVE           |\n");
+						 printf("|_________________________________________|\n");
+						 printf("\nPressez[1] pour l'Arrangement et la combinaison de P dans N \n\n");
 						 printf("Pressez[2] Affichage du mois correspondant a une saisir par l'utilisateur\n\n");
 						 printf("Pressez[3] Sommation des elements composant un nombre entre par l'utlisateur (Ex; 234=9)\n\n");
 						 printf("Pressez[4] pour la racine carree du nombre unique 25 saisir dans le clavier\n\n");
@@ -201,7 +207,7 @@ int main(){
 								printf("Saisis un nombre compris entre 1 a 12 :");
 								scanf("%d",&nbre);
 							}while(nbre<1 || nbre>12);
-							printf("\nVous avez %d qui correspond au mois de : ",nbre);
+							printf("\nVous avez choisi %d qui correspond au mois de : ",nbre);
 							switch(nbre){
 								case 1:printf("Janvier\n");
 								break;
@@ -269,7 +275,7 @@ int main(){
 									}while(nbre!= 25);
 
 									val=sqrt(nbre);
-									printf("\nLa racine carree de %d est : %d",nbre, val);
+									printf("\nLa racine carree de %d est : %d\n\n",nbre, val);
 
 								break;
 						case 5://Quitter le sous menu
@@ -283,8 +289,10 @@ int main(){
 			case 'a': //Vecteur 1 dim[10]
 					do{
 						 system("cls");
-						 printf("\nSOUS MENU UNI MULTI DIMENTIONNELS\n");
-						 printf("Pressez[1] Afficher le resultat de la sommation de deux vecteurs 10, supprimer un element se trouvant dans une position\n quelconque du vecteur trouve, puis reafficher le resultat, supprimer  les doublons dans le vecteur trouve et afficher\n a nouveau le resultat \n\n");
+						 printf(" _________________________________________\n|");
+						 printf("    SOUS MENU UNI MULTI DIMENTIONNELS    |\n");
+						  printf("|_________________________________________|\n");
+						 printf("\nPressez[1] Afficher le resultat de la sommation de deux vecteurs 10, supprimer un element se trouvant dans une position\n quelconque du vecteur trouve, puis reafficher le resultat, supprimer  les doublons dans le vecteur trouve et afficher\n a nouveau le resultat \n\n");
 
 						  printf("Pressez[2] Afficher le nombre d'occurences des elements negatifs se trouvant dans le resultat de difference entre 2\nmatrice carrees d'ordre 6\n\n");
 						  printf("Pressez[3] Afficher la sommation des elements des lignes et des elements des colonnes resultat des produits\nde deux matrices d'ordre M et N \n\n");
