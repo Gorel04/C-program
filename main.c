@@ -621,7 +621,7 @@ int main(){
 									}
 									printf("\n");
 								}
-
+								system("pause");
 
 								// Importer les elements lignes dans un vecteur Vect_1
 								printf("\nVecteur Vect_1 (3eme ligne) :\n");
@@ -657,10 +657,18 @@ int main(){
 
 								for(i=0; i<m; i++){
 									for(j=(i+1); j<m;j++){
-										if(P_Vect[i]<P_Vect[j]);
+										if(P_Vect[i]>P_Vect[j]){
+											aide=P_Vect[j];
+											P_Vect[j]=P_Vect[i];
+											P_Vect[i]=aide;
+										}
 									}
-									printf("%d\t", P_Vect[i]);
 								}
+
+								for(i=0;i<m;i++){
+									printf("%d\t",P_Vect[i]);
+								}
+								system("pause");
 								system("cls");
 							break;
 							case 6://Quitter le sous menu
